@@ -56,13 +56,11 @@ install -d $RPM_BUILD_ROOT%{_libdir}/ocaml/{site-lib,}/configwin
 
 install META $RPM_BUILD_ROOT%{_libdir}/ocaml/site-lib/configwin
 
-gzip -9nf ChangeLog configwin.mli example.ml LICENSE README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog configwin.mli example.ml LICENSE README
 %{_libdir}/ocaml/site-lib/configwin
 %{_libdir}/ocaml/configwin
