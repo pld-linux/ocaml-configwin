@@ -1,4 +1,4 @@
-%define		strange_version		%(echo %{version} | sed -e 's/\\./_/')
+%define		strange_version		%(echo %{version} | tr . _)
 
 Summary:	Library to create config window with lablgtk
 Summary(pl):	Biblioteka do tworzenia okienek konfiguracyjncyh z u¿yciem lablgtk
