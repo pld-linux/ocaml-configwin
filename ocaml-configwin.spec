@@ -14,7 +14,13 @@ BuildRequires:	ocaml-lablgtk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-No main package.
+Configwin is a library used to edit configuration parameters of an
+application using predefined boxes in LablGtk.
+
+%description -l pl
+Configwin jest bibliotek± s³u¿±c± do edycji konfigurowalnych
+parametrów aplikacji z u¿yciem okienek dialogowych stworzonych z
+pomoc± LablGtk.
 
 %package devel
 Summary:	Library to create config window with lablgtk
