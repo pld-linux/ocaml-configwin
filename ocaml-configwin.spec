@@ -44,7 +44,7 @@ pomoc± LablGtk.
 
 %build
 # this doesn't really matter (package makes little use of autoconf)
-autoconf
+%{__autoconf}
 %configure
 %{__make} depend byte opt
 
