@@ -10,6 +10,7 @@ Group:		Libraries
 Vendor:		Maxence Guesdon <maxence.guesdon@inria.fr>
 URL:		http://pauillac.inria.fr/~guesdon/Tools/configwin/configwin.html
 Source0:	http://pauillac.inria.fr/~guesdon/Tools/Tars/configwin_%{strange_version}.tar.gz
+# Source0-md5:	79e68d8e4af9e23434264af86c6fea12
 BuildRequires:	autoconf
 BuildRequires:	ocaml-lablgtk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
