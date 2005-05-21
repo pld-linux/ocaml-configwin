@@ -4,7 +4,7 @@ Summary:	Library to create config window with lablgtk
 Summary(pl):	Biblioteka do tworzenia okienek konfiguracyjnych z u¿yciem lablgtk
 Name:		ocaml-configwin
 Version:	0.93
-Release:	2
+Release:	3
 License:	QPL
 Group:		Libraries
 Vendor:		Maxence Guesdon <maxence.guesdon@inria.fr>
