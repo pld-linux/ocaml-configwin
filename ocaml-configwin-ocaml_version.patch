@@ -1,0 +1,38 @@
+--- configwin-0.93/configure.in~	2005-05-21 22:54:57.000000000 +0200
++++ configwin-0.93/configure.in	2005-05-21 22:54:57.000000000 +0200
+@@ -41,7 +41,7 @@
+ OCAMLBIN=`dirname $OCAMLC`
+ 
+ # we extract Ocaml version number and library path
+-OCAMLVERSION=`$OCAMLC -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' `
++OCAMLVERSION=`$OCAMLC -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' | sed 's|\(.*\..*\)\.\(.*\)|\1\2|'`
+ #echo "ocaml version is $OCAMLVERSION"
+ 
+ # check that this version is at least the one we need
+@@ -63,7 +63,7 @@
+ 	AC_MSG_WARN(Cannot find ocamlopt; bytecode compilation only.)
+ else
+ 	AC_MSG_CHECKING(ocamlopt version)
+-	TMPVERSION=`$OCAMLOPT -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' `
++	TMPVERSION=`$OCAMLOPT -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' | sed 's|\(.*\..*\)\.\(.*\)|\1\2|'`
+ 	if test "$TMPVERSION" != "$OCAMLVERSION" ; then
+ 	    AC_MSG_RESULT(differs from ocamlc; ocamlopt discarded.)
+ 	    OCAMLOPT=no
+@@ -77,7 +77,7 @@
+ AC_PATH_PROG(OCAMLCDOTOPT,ocamlc.opt,no)
+ if test "$OCAMLCDOTOPT" != no ; then
+ 	AC_MSG_CHECKING(ocamlc.opt version)
+-	TMPVERSION=`$OCAMLCDOTOPT -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' `
++	TMPVERSION=`$OCAMLCDOTOPT -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' | sed 's|\(.*\..*\)\.\(.*\)|\1\2|'`
+ 	if test "$TMPVERSION" != "$OCAMLVERSION" ; then
+ 	    AC_MSG_RESULT(differs from ocamlc; ocamlc.opt discarded.)
+ 	else
+@@ -91,7 +91,7 @@
+     AC_PATH_PROG(OCAMLOPTDOTOPT,ocamlopt.opt,no)
+     if test "$OCAMLOPTDOTOPT" != no ; then
+ 	AC_MSG_CHECKING(ocamlc.opt version)
+-	TMPVER=`$OCAMLOPTDOTOPT -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' `
++	TMPVER=`$OCAMLOPTDOTOPT -v | sed -n -e 's|.*version* *\(.*\)$|\1|p' | sed 's|\(.*\..*\)\.\(.*\)|\1\2|'`
+ 	if test "$TMPVER" != "$OCAMLVERSION" ; then
+ 	    AC_MSG_RESULT(differs from ocamlc; ocamlopt.opt discarded.)
+ 	else
