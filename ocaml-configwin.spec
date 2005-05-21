@@ -11,7 +11,9 @@ Vendor:		Maxence Guesdon <maxence.guesdon@inria.fr>
 URL:		http://pauillac.inria.fr/~guesdon/Tools/configwin/configwin.html
 Source0:	http://pauillac.inria.fr/~guesdon/Tools/Tars/configwin_%{strange_version}.tar.gz
 # Source0-md5:	79e68d8e4af9e23434264af86c6fea12
+Patch0:		%{name}-ocaml_version.patch
 BuildRequires:	autoconf
+BuildRequires:	ocaml-camlp4
 BuildRequires:	ocaml-lablgtk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,6 +44,7 @@ pomoc± LablGtk.
 
 %prep
 %setup -q -n configwin-%{version}
+%patch0 -p1
 
 %build
 # this doesn't really matter (package makes little use of autoconf)
