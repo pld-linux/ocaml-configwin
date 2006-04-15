@@ -1,19 +1,18 @@
 %define		strange_version		%(echo %{version} | tr . _)
-
+%define		ocaml_ver	3.09.1
 Summary:	Library to create config window with lablgtk
 Summary(pl):	Biblioteka do tworzenia okienek konfiguracyjnych z u¿yciem lablgtk
 Name:		ocaml-configwin
 Version:	0.93
-Release:	5
+Release:	6
 License:	QPL
 Group:		Libraries
-Vendor:		Maxence Guesdon <maxence.guesdon@inria.fr>
 URL:		http://pauillac.inria.fr/~guesdon/Tools/configwin/configwin.html
 Source0:	http://pauillac.inria.fr/~guesdon/Tools/Tars/configwin_%{strange_version}.tar.gz
 # Source0-md5:	79e68d8e4af9e23434264af86c6fea12
 Patch0:		%{name}-ocaml_version.patch
 BuildRequires:	autoconf
-BuildRequires:	ocaml-camlp4
+BuildRequires:	ocaml-camlp4 >= %{ocaml_ver}
 BuildRequires:	ocaml-lablgtk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +49,7 @@ pomoc± LablGtk.
 # this doesn't really matter (package makes little use of autoconf)
 %{__autoconf}
 %configure
-%{__make} depend byte opt
+%{__make} -j1 depend byte opt
 
 %install
 rm -rf $RPM_BUILD_ROOT
