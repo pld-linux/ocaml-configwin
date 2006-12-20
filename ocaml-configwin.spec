@@ -7,10 +7,10 @@ Version:	0.93
 Release:	8
 License:	QPL
 Group:		Libraries
-URL:		http://pauillac.inria.fr/~guesdon/Tools/configwin/configwin.html
 Source0:	http://pauillac.inria.fr/~guesdon/Tools/Tars/configwin_%{strange_version}.tar.gz
 # Source0-md5:	79e68d8e4af9e23434264af86c6fea12
 Patch0:		%{name}-ocaml_version.patch
+URL:		http://pauillac.inria.fr/~guesdon/Tools/configwin/configwin.html
 BuildRequires:	autoconf
 BuildRequires:	ocaml-camlp4 >= %{ocaml_ver}
 BuildRequires:	ocaml-lablgtk-devel
@@ -55,7 +55,8 @@ pomoc± LablGtk.
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_libdir}/ocaml/{site-lib,}/configwin
-%{__make} install OCAMLLIB=$RPM_BUILD_ROOT%{_libdir}/ocaml/configwin
+%{__make} install \
+	OCAMLLIB=$RPM_BUILD_ROOT%{_libdir}/ocaml/configwin
 
 install META $RPM_BUILD_ROOT%{_libdir}/ocaml/site-lib/configwin
 
