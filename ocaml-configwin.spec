@@ -1,7 +1,7 @@
 %define		strange_version		%(echo %{version} | tr . _)
 %define		ocaml_ver	1:3.09.2
 Summary:	Library to create config window with lablgtk
-Summary(pl):	Biblioteka do tworzenia okienek konfiguracyjnych z u¿yciem lablgtk
+Summary(pl.UTF-8):   Biblioteka do tworzenia okienek konfiguracyjnych z uÅ¼yciem lablgtk
 Name:		ocaml-configwin
 Version:	0.93
 Release:	8
@@ -20,14 +20,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Configwin is a library used to edit configuration parameters of an
 application using predefined boxes in LablGtk.
 
-%description -l pl
-Configwin jest bibliotek± s³u¿±c± do edycji konfigurowalnych
-parametrów aplikacji z u¿yciem okienek dialogowych stworzonych z
-pomoc± LablGtk.
+%description -l pl.UTF-8
+Configwin jest bibliotekÄ… sÅ‚uÅ¼Ä…cÄ… do edycji konfigurowalnych
+parametrÃ³w aplikacji z uÅ¼yciem okienek dialogowych stworzonych z
+pomocÄ… LablGtk.
 
 %package devel
 Summary:	Library to create config window with lablgtk
-Summary(pl):	Biblioteka do tworzenia okienek konfiguracyjnych z u¿yciem lablgtk
+Summary(pl.UTF-8):   Biblioteka do tworzenia okienek konfiguracyjnych z uÅ¼yciem lablgtk
 Group:		Development/Libraries
 %requires_eq	ocaml-lablgtk
 %requires_eq	ocaml
@@ -36,10 +36,10 @@ Group:		Development/Libraries
 Configwin is a library used to edit configuration parameters of an
 application using predefined boxes in LablGtk.
 
-%description devel -l pl
-Configwin jest bibliotek± s³u¿±c± do edycji konfigurowalnych
-parametrów aplikacji z u¿yciem okienek dialogowych stworzonych z
-pomoc± LablGtk.
+%description devel -l pl.UTF-8
+Configwin jest bibliotekÄ… sÅ‚uÅ¼Ä…cÄ… do edycji konfigurowalnych
+parametrÃ³w aplikacji z uÅ¼yciem okienek dialogowych stworzonych z
+pomocÄ… LablGtk.
 
 %prep
 %setup -q -n configwin-%{version}
