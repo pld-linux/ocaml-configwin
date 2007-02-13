@@ -1,7 +1,7 @@
 %define		strange_version		%(echo %{version} | tr . _)
 %define		ocaml_ver	1:3.09.2
 Summary:	Library to create config window with lablgtk
-Summary(pl.UTF-8):   Biblioteka do tworzenia okienek konfiguracyjnych z użyciem lablgtk
+Summary(pl.UTF-8):	Biblioteka do tworzenia okienek konfiguracyjnych z użyciem lablgtk
 Name:		ocaml-configwin
 Version:	0.93
 Release:	8
@@ -27,7 +27,7 @@ pomocą LablGtk.
 
 %package devel
 Summary:	Library to create config window with lablgtk
-Summary(pl.UTF-8):   Biblioteka do tworzenia okienek konfiguracyjnych z użyciem lablgtk
+Summary(pl.UTF-8):	Biblioteka do tworzenia okienek konfiguracyjnych z użyciem lablgtk
 Group:		Development/Libraries
 %requires_eq	ocaml-lablgtk
 %requires_eq	ocaml
